@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.1/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
@@ -15,27 +13,17 @@
 </head>
 
 <body ng-app="locationsExpireApp">
-
-
-<div ng-controller="TodoCtrl" >
-
-    <center><h2>Angular Google Map With Remove Expired Locations</h2></center>
-
-    <div id="map_canvas" >
-        <ui-gmap-google-map center="map.center" class="angular-google-map-container" zoom="map.zoom"  options="options" bounds="map.bounds">
-            <div ng-repeat="m in markers">
-                <ui-gmap-marker ng-if="m.showStatus == true"  coords="m" icon="m.icon" idkey="m.id">
-                </ui-gmap-marker>
-            </div>
-        </ui-gmap-google-map>
+    <div ng-controller="TodoCtrl" >
+        <center><h2>Angular Google Map With Remove Expired Locations</h2></center>
+        <div id="map_canvas" >
+            <ui-gmap-google-map center="map.center" class="angular-google-map-container" zoom="map.zoom"  options="options" bounds="map.bounds">
+                <div ng-repeat="m in markers">
+                    <ui-gmap-marker ng-if="m.showStatus == true"  coords="m" icon="m.icon" idkey="m.id">
+                    </ui-gmap-marker>
+                </div>
+            </ui-gmap-google-map>
+        </div>
     </div>
-</div>
-
-
 <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
-
-
-
 </body>
-
 </html>
