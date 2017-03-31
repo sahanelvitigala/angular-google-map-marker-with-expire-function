@@ -16,7 +16,6 @@ angular.module("locationsExpireApp", ['uiGmapgoogle-maps'])
 
         // Start timer
         $timeout(tick, $scope.tickInterval);
-
         $scope.$watch('clock', function (newVal) {
             $scope.clock = newVal;
             var nowTime = moment();
@@ -34,10 +33,8 @@ angular.module("locationsExpireApp", ['uiGmapgoogle-maps'])
             }
             console.log($scope.markers);
         });
-
-
+    
         $scope.markers = [
-
             {
                 id: 101,
                 latitude: 42.3349940452867,
@@ -64,24 +61,18 @@ angular.module("locationsExpireApp", ['uiGmapgoogle-maps'])
                 expire_date: "07/06/2015 11:00 AM",
                 showStatus: true
             }
-
         ]
-
-
+    
         $scope.map = {
             center: {
                 latitude: 42.3349940452867,
                 longitude: -71.0353168884369
             },
             zoom: 11
-
         };
-
 
         $scope.options = {
             scrollwheel: false
         };
-
-
     })
 ;
